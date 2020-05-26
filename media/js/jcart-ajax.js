@@ -50,7 +50,7 @@ function Cf(a){for(var b in a)if('products'==b&&a.hasOwnProperty(b))for(var c in
 			str_but='<span class="btn jc-qt-minus" minuskey="quantity['+c+']" minusval="'+a[b][c][d]+'">&#8722;</span> <input type="text" value="'
 			+a[b][c][d]+'" class="jc-inputbox" name="quantity['+c+']"> <span class="btn jc-qt-plus" pluskey="quantity['+c+']" plusval="'+a[b][c][d]+'">&#43;</span>';
 		}
-		'price'==d&&(str_prc='<span class="jc-price"><span>&rarr;</span>'+a[b][c][d].toFixed(vpp)+' '+hcc+'</span>')
+		'price'==d&&(str_prc='<span class="jc-price">&rarr; '+a[b][c][d].toFixed(vpp)+' '+hcc+'</span>')
 	}
 	str_row+='<div class="jc-row"><a class="jc-img-product" href="'+urp+'?category_id='+str_cat+'&product_id='+str_pid+'"><img src="'
 	+tip+'/'+str_img+'"></a><div class="jc-name-product"><a href="'+urp+'?category_id='+str_cat+'&product_id='+str_pid+'" name="'+str_pid+'">'
@@ -58,7 +58,7 @@ function Cf(a){for(var b in a)if('products'==b&&a.hasOwnProperty(b))for(var c in
 }}
 function Df(a){
 	str_row='';Cf(a);if((a.price_product-a.rabatt_summ)>0)str_sum=(a.price_product-a.rabatt_summ).toFixed(vpp);else str_sum=0;
-	jQuery('.jc-shop .jc-content').html('<div class="jc-list-product"><div class="jc-rows">'+str_row+'</div><hr class="jc-hr"><div class="jc-total">'+tpc+' <span class="jc-total-qt">'+a.count_product+'</span>, '+tps+' <span class="jc-total-qt">'+str_sum+' '+hcc+'</span></div><div class="jc-btn-center"><a class="btn btn-primary" href="'+uic+'">'+tgc+'</a> <a class="btn btn-success" href="'+ugx+'">'+tgx+'</a></div></div>')
+	jQuery('.jc-shop .jc-content').html('<div class="jc-list-product"><div class="jc-rows">'+str_row+'</div><hr class="jc-hr"><div class="jc-total">'+tpc+': <span class="jc-total-qt">'+a.count_product+'</span>, '+tps+' <span class="jc-total-qt">'+str_sum+' '+hcc+'</span></div><div class="jc-btn-group"><a class="btn btn-primary" href="'+uic+'">'+tgc+'</a> <a class="btn btn-success" href="'+ugx+'">'+tgx+'</a></div></div>')
 }
 jQuery('body').on('click','.oiproduct .button_buy, .product_corps .button_buy',function(a){
 	a.preventDefault();
@@ -89,7 +89,7 @@ jQuery('body').on('click','.jc-remove',function(a){
 			jQuery('.jc-shop .jc-qt-product').html(a.count_product),str_row='',Cf(a),
 			str_sum=(a.price_product-a.rabatt_summ).toFixed(vpp),str_sum<0&&(jQuery(str_sum=0)),
 			jQuery('.jc-shop .jc-content').html('<div class="jc-list-product"><div class="jc-rows">'+str_row+'</div><hr class="jc-hr"><div class="jc-total">'
-			+tpc+' '+a.count_product+' '+tps+' '+str_sum+' '+hcc+'</div><div class="jc-btn-center"><a class="btn btn-primary" href="'+uic+'">'+tgc+'</a> <a class="btn btn-success" href="'+ugx+'">'+tgx+'</a></div></div>'),
+			+tpc+': '+a.count_product+', '+tps+': '+str_sum+' '+hcc+'</div><div class="jc-btn-group"><a class="btn btn-primary" href="'+uic+'">'+tgc+'</a> <a class="btn btn-success" href="'+ugx+'">'+tgx+'</a></div></div>'),
 			a.count_product=='0'&&(jQuery('.jc-shop .jc-list-product').remove()),Af()
 		):setTimeout(function(){location.reload()})
 	},error:function(){jQuery('.jc-loading').remove();location.reload()}});return!1
