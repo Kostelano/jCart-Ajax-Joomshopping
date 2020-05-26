@@ -1,0 +1,322 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="3" type="module" client="site" method="upgrade">
+	<name>MOD_JCART_AJAX</name>
+	<author>Konstantin Kolos</author>
+	<creationDate>01/01/2020</creationDate>
+	<authorEmail>admin@jnotes.net.ua</authorEmail>
+	<authorUrl>http://jnotes.net.ua</authorUrl>
+	<copyright>Copyright (C) 2020 Jnotes.net.ua</copyright>
+	<license>GNU/GPLv3</license>
+	<version>2.0.2</version>
+	<description>MOD_JCART_AJAX_DESC</description>
+	<projectName>jCart-Ajax-Joomshopping</projectName>
+
+	<files>
+		<filename module="mod_jcart_ajax">mod_jcart_ajax.php</filename>
+		<filename>manifest.xml</filename>
+		<folder>tmpl</folder>
+	</files>
+
+	<languages folder="language">
+		<language tag="en-GB">en-GB/en-GB.mod_jcart_ajax.ini</language>
+		<language tag="en-GB">en-GB/en-GB.mod_jcart_ajax.sys.ini</language>
+		<language tag="ru-RU">ru-RU/ru-RU.mod_jcart_ajax.ini</language>
+		<language tag="ru-RU">ru-RU/ru-RU.mod_jcart_ajax.sys.ini</language>
+		<language tag="uk-UA">uk-UA/uk-UA.mod_jcart_ajax.ini</language>
+		<language tag="uk-UA">uk-UA/uk-UA.mod_jcart_ajax.sys.ini</language>
+	</languages>
+
+	<media folder="media" destination="mod_jcart_ajax">
+		<folder>css</folder>
+		<folder>images</folder>
+		<folder>js</folder>
+	</media>
+
+	<config>
+		<fields name="params">
+			<fieldset name="basic">
+				<field
+					name="cartTextOrImage"
+					type="radio"
+					class="btn-group"
+					default="0"
+					label="MOD_JCART_AJAX_TEXT_OR_IMAGE_LABEL"
+					description="MOD_JCART_AJAX_TEXT_OR_IMAGE_DESC">
+						<option value="0">MOD_JCART_AJAX_TEXT_LABEL</option>
+						<option value="1">MOD_JCART_AJAX_IMAGE_LABEL</option>
+						<option value="2">MOD_JCART_AJAX_IMAGE_SELECT_LABEL</option>
+				</field>
+
+				<field type="spacer" name="spacerFields" showon="cartTextOrImage:0" label="MOD_JCART_AJAX_FIELDS_PARAMETERS_LABEL" />
+				<field
+					name="cartFields_1"
+					type="radio"
+					class="btn-group"
+					showon="cartTextOrImage:0"
+					default="0"
+					label="MOD_JCART_AJAX_ACTIVATE_FIELDS_1_LABEL"
+					description="MOD_JCART_AJAX_ACTIVATE_FIELDS_DESC">
+						<option value="0">JNO</option>
+						<option value="1">JYES</option>
+				</field>
+				<field
+					name="cartFieldTitle_1"
+					type="text"
+					size="30"
+					showon="cartTextOrImage:0[AND]cartFields_1:1"
+					default=""
+					label="MOD_JCART_AJAX_FIELD_TITLE_LABEL"
+					description="MOD_JCART_AJAX_FIELD_TITLE_DESC" />
+				<field
+					name="cartFieldUrl_1"
+					type="text"
+					size="30"
+					showon="cartTextOrImage:0[AND]cartFields_1:1"
+					default=""
+					label="MOD_JCART_AJAX_FIELD_URL_LABEL"
+					description="MOD_JCART_AJAX_FIELD_URL_DESC" />
+				<field
+					name="cartFields_2"
+					type="radio"
+					class="btn-group"
+					showon="cartTextOrImage:0"
+					default="0"
+					label="MOD_JCART_AJAX_ACTIVATE_FIELDS_2_LABEL"
+					description="MOD_JCART_AJAX_ACTIVATE_FIELDS_DESC">
+						<option value="0">JNO</option>
+						<option value="1">JYES</option>
+				</field>
+				<field
+					name="cartFieldTitle_2"
+					type="text"
+					size="30"
+					showon="cartTextOrImage:0[AND]cartFields_2:1"
+					default=""
+					label="MOD_JCART_AJAX_FIELD_TITLE_LABEL"
+					description="MOD_JCART_AJAX_FIELD_TITLE_DESC" />
+				<field
+					name="cartFieldUrl_2"
+					type="text"
+					size="30"
+					showon="cartTextOrImage:0[AND]cartFields_2:1"
+					default=""
+					label="MOD_JCART_AJAX_FIELD_URL_LABEL"
+					description="MOD_JCART_AJAX_FIELD_URL_DESC" />
+				<field
+					name="cartFields_3"
+					type="radio"
+					class="btn-group"
+					showon="cartTextOrImage:0"
+					default="0"
+					label="MOD_JCART_AJAX_ACTIVATE_FIELDS_3_LABEL"
+					description="MOD_JCART_AJAX_ACTIVATE_FIELDS_DESC">
+						<option value="0">JNO</option>
+						<option value="1">JYES</option>
+				</field>
+				<field
+					name="cartFieldTitle_3"
+					type="text"
+					size="30"
+					showon="cartTextOrImage:0[AND]cartFields_3:1"
+					default=""
+					label="MOD_JCART_AJAX_FIELD_TITLE_LABEL"
+					description="MOD_JCART_AJAX_FIELD_TITLE_DESC" />
+				<field
+					name="cartFieldUrl_3"
+					type="text"
+					size="30"
+					showon="cartTextOrImage:0[AND]cartFields_3:1"
+					default=""
+					label="MOD_JCART_AJAX_FIELD_URL_LABEL"
+					description="MOD_JCART_AJAX_FIELD_URL_DESC" />
+				<field
+					name="cartFields_4"
+					type="radio"
+					class="btn-group"
+					showon="cartTextOrImage:0"
+					default="0"
+					label="MOD_JCART_AJAX_ACTIVATE_FIELDS_4_LABEL"
+					description="MOD_JCART_AJAX_ACTIVATE_FIELDS_DESC">
+						<option value="0">JNO</option>
+						<option value="1">JYES</option>
+				</field>
+				<field
+					name="cartFieldTitle_4"
+					type="text"
+					size="30"
+					showon="cartTextOrImage:0[AND]cartFields_4:1"
+					default=""
+					label="MOD_JCART_AJAX_FIELD_TITLE_LABEL"
+					description="MOD_JCART_AJAX_FIELD_TITLE_DESC" />
+				<field
+					name="cartFieldUrl_4"
+					type="text"
+					size="30"
+					showon="cartTextOrImage:0[AND]cartFields_4:1"
+					default=""
+					label="MOD_JCART_AJAX_FIELD_URL_LABEL"
+					description="MOD_JCART_AJAX_FIELD_URL_DESC" />
+				<field
+					name="cartFields_5"
+					type="radio"
+					class="btn-group"
+					showon="cartTextOrImage:0"
+					default="0"
+					label="MOD_JCART_AJAX_ACTIVATE_FIELDS_5_LABEL"
+					description="MOD_JCART_AJAX_ACTIVATE_FIELDS_DESC">
+						<option value="0">JNO</option>
+						<option value="1">JYES</option>
+				</field>
+				<field
+					name="cartFieldTitle_5"
+					type="text"
+					size="30"
+					showon="cartTextOrImage:0[AND]cartFields_5:1"
+					default=""
+					label="MOD_JCART_AJAX_FIELD_TITLE_LABEL"
+					description="MOD_JCART_AJAX_FIELD_TITLE_DESC" />
+				<field
+					name="cartFieldUrl_5"
+					type="text"
+					size="30"
+					showon="cartTextOrImage:0[AND]cartFields_5:1"
+					default=""
+					label="MOD_JCART_AJAX_FIELD_URL_LABEL"
+					description="MOD_JCART_AJAX_FIELD_URL_DESC" />
+				<field
+					name="cartFieldsAttribute"
+					type="list"
+					showon="cartTextOrImage:0"
+					default="_self"
+					label="MOD_JCART_AJAX_FIELD_URL_ATTRIBUTE_LABEL"
+					description="MOD_JCART_AJAX_FIELD_URL_ATTRIBUTE_DESC">
+						<option value="_self">MOD_JCART_AJAX_FIELD_URL_SELF</option>
+						<option value="_blank">MOD_JCART_AJAX_FIELD_URL_BLANK</option>
+				</field>
+				<field
+					name="cartFieldsSeparator"
+					type="text"
+					size="30"
+					showon="cartTextOrImage:0"
+					default=""
+					label="MOD_JCART_AJAX_FIELD_SEPARATOR_LABEL"
+					description="MOD_JCART_AJAX_FIELD_SEPARATOR_DESC" />
+
+				<field type="spacer" name="spacerImageSelect" showon="cartTextOrImage:2" label="MOD_JCART_AJAX_IMAGE_PARAMETERS_LABEL" />
+				<field
+					name="cartImageSelect"
+					type="media"
+					showon="cartTextOrImage:2"
+					label="MOD_JCART_AJAX_IMAGE_LABEL"
+					description="MOD_JCART_AJAX_IMAGE_SELECT_DESC" />
+				<field
+					name="cartImageSelectWidth"
+					type="text"
+					showon="cartTextOrImage:2"
+					default="64px"
+					label="MOD_JCART_AJAX_IMAGE_WIDTH_LABEL"
+					description="MOD_JCART_AJAX_IMAGE_WIDTH_DESC" />
+				<field
+					name="cartImageSelectHeight"
+					type="text"
+					showon="cartTextOrImage:2"
+					default="64px"
+					label="MOD_JCART_AJAX_IMAGE_HEIGHT_LABEL"
+					description="MOD_JCART_AJAX_IMAGE_HEIGHT_DESC" />
+				<field
+					name="wishImage"
+					type="radio"
+					class="btn-group"
+					showon="cartTextOrImage:1[OR]cartTextOrImage:2"
+					default="0"
+					label="MOD_JCART_AJAX_IMAGE_WISHLIST_LABEL"
+					description="MOD_JCART_AJAX_IMAGE_WISHLIST_DESC">
+						<option value="0">JNO</option>
+						<option value="1">JYES</option>
+				</field>
+				<field
+					name="wishImageSelect"
+					type="media"
+					showon="cartTextOrImage:2[AND]wishImage:1"
+					label="MOD_JCART_AJAX_IMAGE_LABEL"
+					description="MOD_JCART_AJAX_IMAGE_WISHLIST_SELECT_DESC" />
+				<field
+					name="wishImageSelectWidth"
+					type="text"
+					showon="cartTextOrImage:2[AND]wishImage:1"
+					default="64px"
+					label="MOD_JCART_AJAX_IMAGE_WIDTH_LABEL"
+					description="MOD_JCART_AJAX_IMAGE_WIDTH_DESC" />
+				<field
+					name="wishImageSelectHeight"
+					type="text"
+					showon="cartTextOrImage:2[AND]wishImage:1"
+					default="64px"
+					label="MOD_JCART_AJAX_IMAGE_HEIGHT_LABEL"
+					description="MOD_JCART_AJAX_IMAGE_HEIGHT_DESC" />
+
+				<field type="spacer" name="spacerStyles" label="MOD_JCART_AJAX_STYLE_PARAMETERS_LABEL" />
+				<field
+					name="moduleStyles"
+					type="filelist"
+					directory="media/mod_jcart_ajax/css"
+					filter="(.*).css"
+					hide_none="true"
+					hide_default="true"
+					default="default.min.css"
+					label="MOD_JCART_AJAX_STYLE_CSS_LABEL"
+					description="MOD_JCART_AJAX_STYLE_CSS_DESC" />
+				<field
+					name="moduleStylesAttribute"
+					type="list"
+					default="title"
+					label="MOD_JCART_AJAX_STYLE_ATTRIBUTE_TITLE_LABEL"
+					description="MOD_JCART_AJAX_STYLE_ATTRIBUTE_TITLE_DESC">
+						<option value="title">MOD_JCART_AJAX_STYLE_ATTRIBUTE_TITLE</option>
+						<option value="data-title">MOD_JCART_AJAX_STYLE_ATTRIBUTE_DATA_TITLE</option>
+				</field>
+			</fieldset>
+
+			<fieldset name="advanced">
+				<field
+					name="layout"
+					type="modulelayout"
+					label="JFIELD_ALT_LAYOUT_LABEL"
+					description="JFIELD_ALT_MODULE_LAYOUT_DESC" />
+				<field
+					name="moduleclass_sfx"
+					type="textarea"
+					rows="3"
+					label="COM_MODULES_FIELD_MODULECLASS_SFX_LABEL"
+					description="COM_MODULES_FIELD_MODULECLASS_SFX_DESC" />
+				<field
+					name="owncache"
+					type="list"
+					default="1"
+					label="COM_MODULES_FIELD_CACHING_LABEL"
+					description="COM_MODULES_FIELD_CACHING_DESC"
+					filter="integer">
+						<option value="1">JGLOBAL_USE_GLOBAL</option>
+						<option value="0">COM_MODULES_FIELD_VALUE_NOCACHING</option>
+				</field>
+				<field
+					name="cache_time"
+					type="number"
+					default="900"
+					label="COM_MODULES_FIELD_CACHE_TIME_LABEL"
+					description="COM_MODULES_FIELD_CACHE_TIME_DESC"
+					filter="integer" />
+				<field
+					name="cachemode"
+					type="hidden"
+					default="itemid">
+						<option value="itemid"></option>
+				</field>
+			</fieldset>
+		</fields>
+	</config>
+
+	<updateservers>
+		<server type="extension" name="MOD_JCART_AJAX" priority="1"><![CDATA[https://raw.githubusercontent.com/Kostelano/jCart-Ajax-Joomshopping/master/manifest.xml]]></server>
+	</updateservers>
+</extension>
