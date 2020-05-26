@@ -6,7 +6,7 @@
  * @license	http://gnu.org/licenses/gpl-3.0.html, GNU/GPLv3
 **/
 
-/* TEXT or IMAGE or IMAGE SELECT */
+/* TEXT or DEFAULT IMAGE or CUSTOM IMAGE */
 .jc-img-cart {
 	display: inline-block;
 	text-align: right;
@@ -60,7 +60,6 @@
 	position: absolute;
 	margin: 10px 0 0 0;
 	width: 400px;
-	max-width: 500px;
 	background-color: #fff;
 	-moz-border-radius: 4px;
 	-webkit-border-radius: 4px;
@@ -100,9 +99,9 @@
 .jc-list-empty h3,
 .jc-list-empty h4,
 .jc-list-empty h5 {text-transform: uppercase}
-.jc-rows {padding: 0 5px 0 0; max-height: 400px; overflow-y: auto}
-.jc-row {padding: 0 0 5px 0; border-bottom: 1px dashed #ccc}
-.jc-row:last-child {border: 0}
+.jc-rows {max-height: 400px; overflow-y: auto}
+.jc-row {border-bottom: 1px dashed #ccc}
+.jc-list-product .jc-row:last-child {border: 0}
 .jc-row + .jc-row {margin-top: 15px}
 .jc-img-product {
 	display: block;
@@ -113,10 +112,10 @@
 }
 .jc-img-product img {max-width: 100px; max-height: 100px}
 .jc-attr {margin: 5px 0 0 0}
-.jc-control {clear: both; padding: 20px 0 20px 20px}
+.jc-control {clear: both; padding: 15px 5px 25px 20px}
 .jc-remove {
 	display: inline-block;
-	margin: 0 10px 0 0;
+	margin: 0 7px 0 0;
 	vertical-align: middle;
 	text-align: center;
 	color: #fff;
@@ -143,14 +142,11 @@
 }
 .jc-price {
 	float: right;
-	padding: 5px 5px 0 0;
-	font-size: 20px;
-	font-weight: bolder;
+	margin: 5px 5px 0 0;
+	font-size: 18px;
+	font-weight: 400;
 }
-.jc-price span {
-	margin: 0 10px 0 0;
-	color: #2d5a71;
-}
+.jc-total-qt {color: #c74044}
 .jc-hr {
 	margin: 0;
 	border: 0;
@@ -163,12 +159,11 @@
 }
 .jc-total {
 	position: relative;
-	padding: 20px 0 5px 0;
+	padding: 20px 0 0 0;
 	text-align: center;
 	text-transform: uppercase;
 }
-.jc-total-qt {color: #c74044}
-.jc-btn-center {margin: 15px 0 0 0; text-align: center}
+.jc-btn-group {margin: 15px 0 0 0; text-align: center}
 
 /* ADD TO CART */
 .jc-in-cart-list {

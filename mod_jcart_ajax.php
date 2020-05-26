@@ -22,7 +22,7 @@ if (!file_exists(JPATH_SITE . '/components/com_jshopping/jshopping.php')) {
 
 	$doc = JFactory::getDocument();
 
-	$doc->addStyleSheet(JURI::base() . 'media/mod_jcart_ajax/css/' . $params->get('moduleStyles'));
+	$doc->addStyleSheet(JURI::base() . 'media/mod_jcart_ajax/css/' . $params->get('moduleStyle'));
 	$doc->addScript(JURI::base() . 'media/mod_jcart_ajax/js/jcart-ajax.js');
 
 	$jshopConfig = JSFactory::getConfig();
