@@ -7,7 +7,7 @@ Module for the [Joomshopping](http://webdesigner-profi.de/joomla-webdesign/jooml
 [jCart Ajax (for Joomshopping)](http://jnotes.net.ua/ext/jcart-ajax)
 
 ## Version
-![version](https://img.shields.io/badge/stable-2.0.2-blue?style=for-the-badge)
+![version](https://img.shields.io/badge/stable-2.0.2-blue?style=for-the-badge) ![version-dev](https://img.shields.io/badge/dev-2.0.3-red?style=for-the-badge)
 
 ## System requirements
 ![joomla-version](https://img.shields.io/badge/joomla-3.9x-green?style=for-the-badge) ![joomshopping-version](https://img.shields.io/badge/joomshopping-4x-green?style=for-the-badge) ![php-version](https://img.shields.io/badge/php-7.3x-green?style=for-the-badge)
