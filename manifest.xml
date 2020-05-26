@@ -1,0 +1,21 @@
+<updates>
+	<update>
+		<name><![CDATA[ jCart Ajax ]]></name>
+		<description><![CDATA[ Ajax cart module for Joomshopping component. ]]></description>
+		<element>mod_jcart_ajax</element>
+		<type>module</type>
+		<version>2.0.2</version>
+		<infourl title="jCart Ajax 2.0.2">http://jnotes.net.ua/ext/jcart-ajax</infourl>
+		<downloads>
+			<downloadurl type="full" format="zip">https://github.com/Kostelano/jCart-Ajax-Joomshopping/releases/download/2.0.2/mod_jcart_ajax_2.0.2.zip</downloadurl>
+		</downloads>
+		<tags>
+			<tag>stable</tag>
+		</tags>
+		<maintainer><![CDATA[ Jnotes.net.ua ]]></maintainer>
+		<maintainerurl>http://jnotes.net.ua</maintainerurl>
+		<section>Updates</section>
+		<targetplatform name="joomla" version="3.9"/>
+		<client>0</client>
+	</update>
+</updates>
